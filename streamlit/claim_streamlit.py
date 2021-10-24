@@ -566,7 +566,7 @@ if rad=="Analyse visuelle des données":
 
         st.subheader("3- Cartographie des catastrophes naturelles les plus graves en France")
    
-        catnat_graves=Image.open("Arretes catnat majeures all.png")
+        catnat_graves=Image.open("streamlit/Arretes catnat majeures all.png")
         st.image(catnat_graves)
    
         my_expander = st.expander(label='** Provenance des données  **')
