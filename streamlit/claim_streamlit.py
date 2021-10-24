@@ -63,7 +63,7 @@ def load_features(features_name):
 
 @st.cache(allow_output_mutation=True)
 def load_target(target_name): 
-    target=pd.read_csv('target.csv', sep=';',index_col='Identifiant')
+    target=pd.read_csv('streamlit/target.csv', sep=';',index_col='Identifiant')
     return (target)     
 
 feats=load_features('feats')
@@ -76,7 +76,7 @@ X_train, X_test, y_train, y_test = train_test_split(feats, target, test_size=0.2
 #### mes fonctions#########
 @st.cache(allow_output_mutation=True)
 def load_features_enrichie(feats_enrichies): 
-    feats_enrichies=pd.read_csv('feats_enrichies.csv', sep=';')
+    feats_enrichies=pd.read_csv('streamlit/feats_enrichies.csv', sep=';')
     return (feats_enrichies)   
 
 feats_enrichies=load_features_enrichie('feats_enrichies')
