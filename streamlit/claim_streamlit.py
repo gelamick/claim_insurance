@@ -270,7 +270,7 @@ if rad == "Les jeux de données":
             st.write('''- Elle ne nécessite aucun traitement spécifique pour faciliter son traitement.''')
             st.write('''- La distribution des sinistres est déséquilibrée (80/20) comme en témoigne le graphique
                      suivant.''')
-            st.image("cible.png")
+            st.image("streamlit/cible.png")
 
 ##########partie Analyse exploratoire#########            
 
@@ -296,7 +296,7 @@ if rad == "Cleaning et préparation des données ":
         
         Age bâtiment = Année observée par la police d’assurance - Année de construction''')
         
-        my_expander = st.expander(label='** Détail imporatnt  **')
+        my_expander = st.expander(label='** Détail important  **')
         
         with my_expander:('''-Face à un taux de NaN supérieur à 10% sur la variable Année de construction (ft_22_categ) on a utilisé la méthode knn_imputer pour les remplacer.''')
         
@@ -428,7 +428,7 @@ if rad=="Analyse visuelle des données":
         if res_bouton1:
             st.write('''## *Analyse de corrélation entre les 4 variables numériques.* ''')
 
-            df = pd.read_csv('claim_c.csv',sep=';',index_col='Identifiant')
+            df = pd.read_csv('streamlit/claim_c.csv',sep=';',index_col='Identifiant')
        #suppression de 'Unnamed: 0'
             df.drop('Unnamed: 0',axis=1,inplace=True)
 
@@ -517,7 +517,7 @@ if rad=="Analyse visuelle des données":
     if rad2=="3- Analyse visuelle à l'aide de données externes":
         st.markdown('''Les données externes utilisées : les coordonnées géographiques - latitude & longitude par code INSEE - et les arrêtés de catastrophes naturelles.''')
    # chargement des observations du dataset Claimpy d'origine, après cleaning
-        claim_c=pd.read_csv('claim_c.csv', sep=';')
+        claim_c=pd.read_csv('streamlit/claim_c.csv', sep=';')
    # chargement des coordonnées géographiques et régions des codes INSEE
         geocoord=pd.read_csv('Codes geo_gps.csv', sep=';')
    # Ajout des coordonnées géographiques longitude - latitude, département, région  
@@ -579,7 +579,7 @@ if rad=="Analyse visuelle des données":
         st.subheader('''4- Sachant que la superficie du bâtiment est déterminante, examinons où se trouvent les grands bâtiments.''')
                                                 
    #Grands bâtiments assurés
-        img = plt.imread("50 plus grands batiments.jpg")
+        img = plt.imread("streamlit/50 plus grands batiments.jpg")
         st.image(img)
         st.write(''' On observe une relative concordance entre l'implantation des bâtiments de grande surface et les périls de type catastrophe naturelle qui peuvent les sinistrer.
             #Observation à confirmer bien sûr par la modélisation.''')
@@ -617,7 +617,7 @@ mesure de performance afin de choisir un modèle.
 Les étapes de modélisation qu’on a suivies restent les mêmes sans ou avec l’ajout des 
 données externes.
             ''')
-        img = plt.imread("Screen demarche.jpg")
+        img = plt.imread("streamlit/Screen demarche.jpg")
         st.image(img)
 
 
@@ -638,7 +638,7 @@ ensemble non exhaustif de modèles.
 
 Ci_dessous le résultat du lazy predict :                
                 ''')
-                img2 = plt.imread("lazy.jpg")
+                img2 = plt.imread("streamlit/lazy.jpg")
                 st.image(img2)
          
                 st.write('''
@@ -684,7 +684,7 @@ comme le nôtre .
 
 Ci dessous un exemple illustrant cette fonction:
             ''')
-            img = plt.imread("sample_w.jpg")
+            img = plt.imread("streamlit/sample_w.jpg")
             st.image(img)
             
             url = "https://www.researchgate.net/publication/288001323_Struck_Structured_Output_Tracking_with_Kernels"
@@ -861,7 +861,7 @@ Ci dessous un exemple illustrant cette fonction:
         if titre:
             st.markdown(" ### *Matrice de confusion pour Gradient Boosting Classifier* ") 
         
-            img1 = plt.imread("cm.jpg")
+            img1 = plt.imread("streamlit/cm.jpg")
             st.image(img1)
         
         titre2=st.checkbox("Rapport de classification")
@@ -869,7 +869,7 @@ Ci dessous un exemple illustrant cette fonction:
             
             
         
-            img2 = plt.imread("classification_imbalanced.jpg")
+            img2 = plt.imread("streamlit/classification_imbalanced.jpg")
             st.image(img2)
             st.write(''' 
                      * Le tableau précedent montre que le rappel et le f1-score de la classe 1 sont pas 
@@ -896,7 +896,7 @@ Ci dessous un exemple illustrant cette fonction:
                  
                 ''')   
                 
-            img3 = plt.imread("features_Imp.jpg")
+            img3 = plt.imread("streamlit/features_Imp.jpg")
             st.image(img3)            
             st.write('''
                      
