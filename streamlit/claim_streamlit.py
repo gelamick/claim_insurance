@@ -454,7 +454,7 @@ if rad=="Analyse visuelle des données":
        
             st.markdown("Il y a un petit temps de calcul du **_V de Cramer_** qui compare ici de nombreuses variables...")
            
-            df = pd.read_csv('claim_c.csv',sep=';',index_col='Identifiant')
+            df = pd.read_csv('streamlit/claim_c.csv',sep=';',index_col='Identifiant')
        #selection des variables catégorielles
             df_cat=df.select_dtypes(exclude=['float'])
 
