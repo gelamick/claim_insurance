@@ -978,7 +978,7 @@ via les codes Insee avec le fichier des crimes et délits et les fichiers compor
             st.sidebar.markdown("### Sources: ")
             st.sidebar.write("""
                
-                [![](https://img.shields.io/badge/GitHub%20-Claimpy-informational)](https://github.com/DataScientest-Studio/Claimpy.git)
+                [![](https://img.shields.io/badge/GitHub%20-Claimpy-informational)](https://github.com/gelamick/claim_insurance.git)
                    
                             """)   
         
