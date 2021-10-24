@@ -49,6 +49,7 @@ def gini_normalized(actual, pred):
 
 score=make_scorer(gini_normalized,greater_is_better = True)
 
+
 features_name = ('feats')
 target_name=('target')
 feats_enrichies=('feats_enrichies')   
@@ -57,7 +58,7 @@ feats_enrichies=('feats_enrichies')
 #import des données
 @st.cache(allow_output_mutation=True)
 def load_features(features_name): 
-    feats=pd.read_csv('feats_maj.csv', sep=';',index_col='Identifiant')
+    feats=pd.read_csv('streamlit/feats_maj.csv', sep=';',index_col='Identifiant')
     return (feats)   
 
 @st.cache(allow_output_mutation=True)
