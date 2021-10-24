@@ -519,7 +519,7 @@ if rad=="Analyse visuelle des données":
    # chargement des observations du dataset Claimpy d'origine, après cleaning
         claim_c=pd.read_csv('streamlit/claim_c.csv', sep=';')
    # chargement des coordonnées géographiques et régions des codes INSEE
-        geocoord=pd.read_csv('Codes geo_gps.csv', sep=';')
+        geocoord=pd.read_csv('streamlit/Codes geo_gps.csv', sep=';')
    # Ajout des coordonnées géographiques longitude - latitude, département, région  
         claim_geo= claim_c.merge(geocoord, on='Insee', how='left')
    # Tous les codes INSEE du dataset d'origine n'ont pas matché avec les codes INSEE
