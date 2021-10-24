@@ -240,7 +240,7 @@ if rad == "Les jeux de données":
             st.write('''- Chaque bâtiment assuré est identifié par un INSEE unique''')
             st.write('''- Plusieurs variables ont des descriptions manquantes (NaN)''')
             
-            st.image("variables.png")
+            st.image("streamlit/variables.png")
             
             my_expander = st.expander(label='Informations importantes')
             with my_expander:
@@ -348,14 +348,14 @@ if rad=="Analyse visuelle des données":
     du dataset qui intuitivement auraient un impact sur la probabilité d'un sinistre.''')
     
         # Chargement du dataframe X_train et fusion avec y_train (target)
-            df = pd.read_csv('X_train.csv', sep = ',')
+            df = pd.read_csv('streamlit/X_train.csv', sep = ',')
             df=df.drop(['Identifiant'],axis=1)
-            df_y = pd.read_csv('y_train_saegPGl.csv', sep = ',')
+            df_y = pd.read_csv('streamlit/y_train_saegPGl.csv', sep = ',')
             data = pd.concat([df, df_y], axis = 1)
     
     # Scatterplot combiné de tous les bâtiments avec age et superficie pour axes. Et hue = target
     
-            df = pd.read_csv('X_train.csv', sep = ',')
+            df = pd.read_csv('streamlit/X_train.csv', sep = ',')
             plt.figure(figsize = (3,3))
             fig, ax = plt.subplots()
             plt.xlabel("Année de construction")
