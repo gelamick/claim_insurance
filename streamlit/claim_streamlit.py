@@ -132,7 +132,7 @@ st.markdown(html_temp,unsafe_allow_html=True)
 
 
 #creation du menu et mise en forme
-st.sidebar.image('logo.png')
+st.sidebar.image('streamlit/logo.png')
 rad=st.sidebar.radio("Menu", ["Home","Présentation du projet", "Les jeux de données","Cleaning et préparation des données ","Analyse visuelle des données","Méthodologie","Modélisation","Conclusion"])
 
 if rad == "Home":
@@ -142,7 +142,7 @@ if rad == "Home":
             ##
             """)     
    
-    st.image("site_expose.png")
+    st.image("streamlit/site_expose.png")
     html_temp = """ 
      <h2 style="color:black;text-align:center;"> Data Analyst : Promotion Bootcamp  Mars 2021</h2>
     
