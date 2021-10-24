@@ -28,8 +28,6 @@ from sklearn.metrics import make_scorer
 from sklearn.utils.class_weight import compute_sample_weight
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import RepeatedStratifiedKFold
-import cartopy.crs as ccrs
-import cartopy.feature as cfeature
 import association_metrics as am
 
 
